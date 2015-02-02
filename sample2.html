@@ -1,0 +1,171 @@
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    
+    <style>
+		#hahaa{
+			margin-top: 20px;
+			margin-left: 35px;	
+		}
+        .form-group {
+            line-height: 30px;
+            height: 30px;
+        }
+        .radio-inline, .checkbox-inline {
+            line-height: 20px;
+        }
+        textarea.form-control {
+            resize: both;
+			margin-left: 185px;
+			margin-bottom: 20px;
+        }
+		.form-control{
+			width: 320px;
+line-height: 30px;
+height: 30px;
+margin-left: 185px;
+margin-top: -34px;	
+		}
+       <!-- .radio-inline, .checkbox-inline{
+            padding-left: 0px;   
+        }-->
+      
+        .Appraisal {
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-left: -80px;
+            margin-top: -12px;
+        }
+    </style>
+</head>
+
+<body background="bg1.jpg">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg Appraisal" data-toggle="modal" data-target="#myModal">
+        asdasd
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                   <h2 class="modal-title" id="myModalLabel">Request Form</h2>
+              </div>
+             <!-- <div id="hahaa">
+              	<p><h3><b><i>Institution details</i></b></h3></p>
+              </div>-->
+              <div class="form-group">
+                <p>
+                  <label for="exampleInputName3" id="hahaa">Name of Institution</label> 
+                  <input type="text" class="form-control" id="exampleInputName2" placeholder="Eg:CMR Group of Institutions" />
+                  
+                </p>
+              </div><br>
+              <div class="form-group">
+                <p>
+                  <label for="exampleInputName3" id="hahaa">Contact Person: </label>
+                  <input type="text" class="form-control" id="exampleInputName" placeholder="Name" />
+                </p>
+              </div><br>
+              <div class="form-group">
+                <p>
+                  <label for="exampleInputName3" id="hahaa">Contact#: </label>
+                  <input type="text" class="form-control" id="exampleInputName3" placeholder="Eg:9xxxxxxxxx" />
+                </p>
+              </div><br>
+              <div class="form-group">
+                <p>
+                  <label for="exampleInputName3" id="hahaa">Quantity Required: </label>
+                  <input type="text" class="form-control" id="exampleInputName3" placeholder="Eg:Multiples of 10"/>
+                </p>
+              </div><br>
+              <hr style="border-top: dotted 1px;" />
+              <div class="form-group">
+                <p>
+                  <label for="exampleInputName3" id="hahaa">Company Name:</label> 
+                  <input type="text" class="form-control" id="exampleInputName2" placeholder="Eg:Pressman" />
+                  
+                </p>
+              </div><br>
+              <div class="form-group">
+                <p>
+                  <label for="exampleInputName3" id="hahaa">Contact Person: </label>
+                  <input type="text" class="form-control" id="exampleInputName" placeholder="Name" />
+                </p>
+              </div><br>
+              <div class="form-group">
+                <p>
+                  <label for="exampleInputName3" id="hahaa">Contact#: </label>
+                  <input type="text" class="form-control" id="exampleInputName3" placeholder="Eg:9xxxxxxxxx" />
+                </p>
+              </div><br>
+              <div class="form-group">
+                <p>
+                 <!-- <label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
+                  <span class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email" />-->
+                  <div class="form-group">
+    <label for="exampleInputEmail1" id="hahaa">Email address:</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+                  </span>                </p>
+                <div class="col-sm-10"></div>
+          </div><br>
+              <div>
+                <label for="exampleInputName2" id="hahaa">Description:</label>
+              <!--<input type="text" class="form-control" placeholder="Text input">-->
+              <textarea name="textarea" rows="3" class="form-control"></textarea>
+              </div><br>
+      <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="rw-ui-container"></div>
+    <!--<script type="text/javascript">(function(d, t, e, m){
+        // Async Rating-Widget initialization.
+    window.RW_Async_Init = function(){
+                
+        RW.init({
+            huid: "208196",
+            uid: "823b0f150c26592ef294c4ecb866de3d",
+            source: "website",
+            options: {
+                "size": "medium",
+                "style": "oxygen"
+            } 
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+        l = d.location, ck = "Y" + t.getFullYear() + 
+        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+    if (d.getElementById(id)) return;              
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = "text/javascript";
+    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>-->
+
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    
+    <style>
+        .form-group {
+            line-height: 30px;
+            height: 30px;
+        }
+        .radio-inline, .checkbox-inline {
+            line-height: 20px;
+        }
+        textarea.form-control {
+            resize: none;
+        }
+        .radio-inline, .checkbox-inline{
+            padding-left: 0px;   
+        }
+        .rating{
+            width:80px;
+            height:16px;
+            margin:0 0 20px 0;
+            padding:0;
+            list-style:none;
+            clear:both;
+            position:relative;
+            background: url(star-matrix.gif) no-repeat 0 0;
+        }
+        /* add these classes to the ul to effect the change to the correct number of stars */
+        .nostar {background-position:0 0}
+        .onestar {background-position:0 -16px}
+        .twostar {background-position:0 -32px}
+        .threestar {background-position:0 -48px}
+        .fourstar {background-position:0 -64px}
+        .fivestar {background-position:0 -80px}
+        ul.rating li {
+            cursor: pointer;
+         /*ie5 mac doesn't like it if the list is floated\*/
+            float:left;
+            /* end hide*/
+            text-indent:-999em;
+        }
+        ul.rating li a {
+            position:absolute;
+            left:0;
+            top:0;
+            width:16px;
+            height:16px;
+            text-decoration:none;
+            z-index: 200;
+        }
+        ul.rating li.one a {left:0}
+        ul.rating li.two a {left:16px;}
+        ul.rating li.three a {left:32px;}
+        ul.rating li.four a {left:48px;}
+        ul.rating li.five a {left:64px;}
+        ul.rating li a:hover {
+            z-index:2;
+            width:80px;
+            height:16px;
+            overflow:hidden;
+            left:0;	
+            background: url(images/star-matrix.gif) no-repeat 0 0
+        }
+        ul.rating li.one a:hover {background-position:0 -96px;}
+        ul.rating li.two a:hover {background-position:0 -112px;}
+        ul.rating li.three a:hover {background-position:0 -128px}
+        ul.rating li.four a:hover {background-position:0 -144px}
+        ul.rating li.five a:hover {background-position:0 -160px}
+        .Appraisal {
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-left: -80px;
+            margin-top: -12px;
+        }
+    </style>
+</head>
+
+<body background="bg1.jpg">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg Appraisal" data-toggle="modal" data-target="#myModal">
+        Ready for Appraisal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Appraisal Form</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Reviewing Date:</label>
+                        <div class="col-sm-6">
+                            <input type="date" class="form-control" id="inputEmail3" placeholder="DD/MM/YYYY">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Employee Name:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputEmail3" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Employee ID#:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputEmail3" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Position:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputEmail3" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Current Salary:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputEmail3" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Job Standards:</label>
+                        <div class="col-sm-6">
+                            <form action="/html/codes/html_form_handler.cfm" method="get">
+<input type="radio" name="preferred_color" value="option1" /> GOOD
+<input type="radio" name="preferred_color" value="option2" /> AVERAGE
+<input type="radio" name="preferred_color" value="option3" /> POOR
+</form>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Leadership Ability:</label>
+                        <div class="col-sm-6">
+                            <form action="/html/codes/html_form_handler.cfm" method="get">
+<input type="radio" name="preferred_color" value="option1" /> GOOD
+<input type="radio" name="preferred_color" value="option2" /> AVERAGE
+<input type="radio" name="preferred_color" value="option3" /> POOR
+</form>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Ensure Quality:</label>
+                        <div class="col-sm-6">
+                            <form action="/html/codes/html_form_handler.cfm" method="get">
+<input type="radio" name="preferred_color" value="option1" /> GOOD
+<input type="radio" name="preferred_color" value="option2" /> AVERAGE
+<input type="radio" name="preferred_color" value="option3" /> POOR
+</form>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Turn-up:</label>
+                        <div class="col-sm-6">
+                              <div class="input-group">
+                                  <input type="text" class="form-control" id="inputEmail3" />
+                                  <span class="input-group-addon">%</span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Cutomer Focus:</label>
+                        <div class="col-sm-6">
+                             <form action="/html/codes/html_form_handler.cfm" method="get">
+<input type="radio" name="preferred_color" value="option1" /> GOOD
+<input type="radio" name="preferred_color" value="option2" /> AVERAGE
+<input type="radio" name="preferred_color" value="option3" /> POOR
+</form>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Communication:</label>
+                        <div class="col-sm-6">
+                            <form action="/html/codes/html_form_handler.cfm" method="get">
+<input type="radio" name="preferred_color" value="option1" /> GOOD
+<input type="radio" name="preferred_color" value="option2" /> AVERAGE
+<input type="radio" name="preferred_color" value="option3" /> POOR
+</form>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Work Attitude:</label>
+                        <div class="col-sm-6">
+                            <form action="/html/codes/html_form_handler.cfm" method="get">
+<input type="radio" name="preferred_color" value="option1" /> GOOD
+<input type="radio" name="preferred_color" value="option2" /> AVERAGE
+<input type="radio" name="preferred_color" value="option3" /> POOR
+</form>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Current Orientation:</label>
+                        <div class="col-sm-6">
+                             <form action="/html/codes/html_form_handler.cfm" method="get">
+<input type="radio" name="preferred_color" value="option1" /> GOOD
+<input type="radio" name="preferred_color" value="option2" /> AVERAGE
+<input type="radio" name="preferred_color" value="option3" /> POOR
+</form>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Innovation:</label>
+                        <div class="col-sm-6">
+                             <form action="/html/codes/html_form_handler.cfm" method="get">
+<input type="radio" name="preferred_color" value="option1" /> GOOD
+<input type="radio" name="preferred_color" value="option2" /> AVERAGE
+<input type="radio" name="preferred_color" value="option3" /> POOR
+</form>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Supervisor Comments:</label>
+                        <div class="col-sm-6">
+                            <textarea type="text" class="form-control" id="inputEmail3"></textarea>
+                        </div>
+                    </div><br>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-4 control-label">Employee Comments:</label>
+                        <div class="col-sm-6">
+                            <textarea type="text" class="form-control" id="inputEmail3"></textarea>
+                        </div>
+                    </div>
+                    <div> 
+                        <ul class="rating nostar">
+                            <li class="one"><a href="#" title="1 Star">1</a></li>
+                            <li class="two"><a href="#" title="2 Stars">2</a></li>
+                            <li class="three"><a href="#" title="3 Stars">3</a></li>
+                            <li class="four"><a href="#" title="4 Stars">4</a></li>
+                            <li class="five"><a href="#" title="5 Stars">5</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rw-ui-container"></div>
+    <script type="text/javascript">(function(d, t, e, m){
+        // Async Rating-Widget initialization.
+    window.RW_Async_Init = function(){
+                
+        RW.init({
+            huid: "208196",
+            uid: "823b0f150c26592ef294c4ecb866de3d",
+            source: "website",
+            options: {
+                "size": "medium",
+                "style": "oxygen"
+            } 
+        });
+        RW.render();
+    };
+        // Append Rating-Widget JavaScript library.
+    var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+        l = d.location, ck = "Y" + t.getFullYear() + 
+        "M" + t.getMonth() + "D" + t.getDate(), p = l.protocol,
+        f = ((l.search.indexOf("DBG=") > -1) ? "" : ".min"),
+        a = ("https:" == p ? "secure." + m + "js/" : "js." + m);
+    if (d.getElementById(id)) return;              
+    rw = d.createElement(e);
+    rw.id = id; rw.async = true; rw.type = "text/javascript";
+    rw.src = p + "//" + a + "external" + f + ".js?ck=" + ck;
+    s.parentNode.insertBefore(rw, s);
+    }(document, new Date(), "script", "rating-widget.com/"));</script>
+
+</body>
+
+</html>

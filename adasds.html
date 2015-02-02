@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<title>Untitled Document</title>
+<style>
+	.form-group {
+            line-height: 30px;
+            height: 30px;
+     }
+	.Appraisal {
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-left: -80px;
+            margin-top: -12px;
+     }
+</style>
+</head>
+
+<body>
+	<!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg Appraisal" data-toggle="modal" data-target="#myModal">
+        Click Here..!!!
+    </button>
+ <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>-->
+                          <h2 class="modal-title" id="myModalLabel">Request Form</h2>
+              </div>
+              <div class="form-group">
+                <p>
+                  <label for="exampleInputName3">Company Name: </label>
+                  <input type="text" class="form-control" id="exampleInputName3" placeholder="Jane Doe" />
+                </p>
+              </div>
+              <div class="form-group">
+                <p>
+                  <label for="exampleInputName3">Contact Person: </label>
+                  <input type="text" class="form-control" id="exampleInputName3" placeholder="Jane Doe" />
+                </p>
+              </div>
+              <div class="form-group">
+                <p>
+                  <label for="exampleInputName3">Contact#: </label>
+                  <input type="text" class="form-control" id="exampleInputName3" placeholder="Jane Doe" />
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email:</label>
+                <span class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email" />
+                </span>
+                <div class="col-sm-10"></div>
+          </div>
+              <div>
+                <label for="exampleInputName2">Description:</label>
+              <!--<input type="text" class="form-control" placeholder="Text input">-->
+              <textarea name="textarea" rows="3" class="form-control"></textarea>
+              </div>
+      <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

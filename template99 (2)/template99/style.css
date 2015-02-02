@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background:url(images/bg.gif);
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.top{
+	background:url(images/bg_top.png) top no-repeat;
+}
+.cntbody{
+	background:url(images/bg_middle.png) center repeat-y;
+	height:100%;
+}
+.bottom{
+	background:url(images/bg_bottom.png) top no-repeat;
+}
+.header{
+	background:url(images/top.png) center no-repeat;
+	height:220px;
+}
+.menu{
+	width:700px;
+	margin:0 auto;
+	text-align:center;
+	/*padding:1px 20px;*/
+	
+	background:url(images/menu_bg.jpg) no-repeat center;
+	padding-top:15px;
+	padding-left:55px;
+	/*text-align:center;*/
+	height:38px;
+	/*margin:auto;*/
+}
+
+}
+.cnt_top{
+	/*background:url(images/cnt_bg.gif) no-repeat center;*/
+	margin-top:5px;
+}
+.cnt_mid{
+	/*background:url(images/cnt_mid.gif) repeat-y center;*/
+	height:100%;
+	padding-left:40px;
+	padding-right:40px;
+	padding-bottom:30px;
+	color:#FFFFFF;
+	line-height:2em;
+	text-align:justify;
+}
+
+.cnt_btm{
+	/*background:url(images/cnt_btm.gif) no-repeat top;*/
+}
+/*.menu a{
+	display:block;
+	padding:2px;
+	padding-top:10px;
+	width:75px;
+	height:65%;
+	float:left;
+	border:none;
+	border-right:solid #003300 thin;
+	color:#003300;
+	text-decoration:none;
+}*/
+/*.menu a:hover{
+	background:url(images/btn_hover.gif) repeat-x center;
+	color:#fff;
+}*/
+a{
+	color:#CCCCCC;
+}
+.clear{
+	clear:both;
+}
+#portfolio, #portfolio ul, #portfolio li{margin:0; padding:0; list-style:none;}
+h3{
+	font-family:calibri;
+	font-weight:bold;
+	font-size:16px;
+	background:#808000;
+	text-align:center;
+	text-transform:uppercase;
+}
+h4{
+	font-family:Arial, Helvetica, sans-serif;
+	font-style:normal;
+	font-style:italic;
+	font-size:14px;
+	background:#808000;
+	color:#ccc;
+	width:auto;
+	border-bottom:thin dotted #003300;
+}
+.subheader{
+	font-family:Arial, Helvetica, sans-serif;
+	/*font-weight:bold;*/
+	font-style:italic;
+	font-size:14px;
+	background:#808000;
+	color:#ccc;
+	width:auto;
+	border-bottom:thin dotted #003300;
+	padding:3px;
+}
+.cnt_mid div{
+	 border-top:thin dotted #003300;
+}
+img{
+	border-color:#808000;
+}

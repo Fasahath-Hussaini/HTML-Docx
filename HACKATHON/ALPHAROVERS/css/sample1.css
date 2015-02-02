@@ -1,0 +1,36 @@
+  
+		#hahaa{
+			margin-top: 20px;
+			margin-left: 35px;	
+		}
+        .form-group {
+            line-height: 30px;
+            height: 30px;
+        }
+        .radio-inline, .checkbox-inline {
+            line-height: 20px;
+        }
+        textarea.form-control {
+            resize: both;
+			margin-left: 185px;
+			margin-bottom: 20px;
+        }
+		.form-control{
+			width: 320px;
+line-height: 30px;
+height: 30px;
+margin-left: 185px;
+margin-top: -34px;	
+		}
+       <!-- .radio-inline, .checkbox-inline{
+            padding-left: 0px;   
+        }-->
+      
+        .Appraisal {
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-left: -80px;
+            margin-top: -12px;
+        }
+    
